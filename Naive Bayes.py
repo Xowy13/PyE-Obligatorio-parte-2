@@ -8,11 +8,11 @@ y_train = np.array([0, 1, 0, 1, 0, 1, 0, 1])
 compra = np.sum(y_train == 1)/len(y_train)
 no_compra = 1-compra
 
-edad_mayor = np.sum(X_train[1,:] == 1)/len(X_train)
+edad_mayor = np.sum(X_train[:,0] == 1)/len(X_train)
 edad_menor = 1-edad_mayor
 
-edad_mayor_compra = np.sum((X_train[1,:] == 1) & (y_train == 1))/np.sum(y_train == 1)
-edad_mayor_no_compra = np.sum((X_train[1,:] == 1) & (y_train == 0))/np.sum(y_train == 0)
+edad_mayor_compra = np.sum((X_train[:,0] == 1) & (y_train == 1))/np.sum(y_train == 1)
+edad_mayor_no_compra = np.sum((X_train[:, 0] == 1) & (y_train == 0))/np.sum(y_train == 0)
 
 ingreso_mayor = np.sum(X_train[:,1] == 1)/len(X_train)
 ingreso_menor = 1-ingreso_mayor
